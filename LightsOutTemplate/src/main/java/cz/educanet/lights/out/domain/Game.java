@@ -29,6 +29,10 @@ public class Game implements ILightsOut {
         return this.moveCount;
     }
 
+    public void addMove() {
+        this.moveCount++;
+    }  //putting this in makeMove would count moves made when randomizing
+
     @Override
     public boolean isGameOver() {
         for (int i = 0; i < getGrid().length; i++) {
@@ -46,8 +50,6 @@ public class Game implements ILightsOut {
 
     @Override
     public void makeMove(int x, int y) {
-        this.moveCount++;
-
         if (this.getGrid()[x][y]) this.grid[x][y] = false; //center
         else this.grid[x][y] = true;
 

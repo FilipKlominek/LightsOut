@@ -43,7 +43,7 @@ public class GameController {
                     int x = i;
                     cell.setOnMouseClicked(event -> {
                         game.makeMove(x, y);
-
+                        game.addMove();
                         rerender();
                     });
 
